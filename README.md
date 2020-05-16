@@ -1,1 +1,1 @@
-# Savanna-Symulation
+# Savanna Symulation
