@@ -12,20 +12,16 @@ import world.Tile;
  */
 
 public class Sand extends Tile {
-
-	public static final Sprite texture = new Sprite(0, 16, 16, 16, Spritesheet.def);
-
+	
+	 
 	/**
-	 * Constructor defines tile's id.
+	 * Constructor defines tile's id and graphic interpretation.
 	 */
-
+	
 	public Sand() {
-		id = 1;
+		id  = 1;
+		texture = new Sprite(0,16,16,16,Spritesheet.def);
 	}
-
-	public void render(Screen s, int x, int y) {
-		s.renderSprite(x * 16, y * 16, texture);
-
-	}
-
+	
+	
 }
