@@ -1,12 +1,13 @@
 package animals;
 
-import graphics.Screen;
-import world.Map;
-import world.Tile;
+import java.util.Random;
 
-/**
- * This class and its subclasses are responsible for making and rendering
- * aninals as well as changing their position randomly and update their state.
+import graphics.Screen;
+import graphics.Sprite;
+import world.Map;
+
+/** This class and its subclasses are responsible for making and rendering aninals
+ *  as well as changing their position randomly and update their state.
  * 
  * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
  * 
@@ -14,42 +15,21 @@ import world.Tile;
  */
 
 public abstract class Animal {
-
-	public Animal() {
-	}
-
+	
+	protected int x,y,thrist,hunger,lifeTime,speed;
+	
+	protected Sprite skin;
+	
+	public Animal() {}
+	
 	/**
 	 * Method used to render animals.
 	 * 
 	 * @param s - space where images can appear
 	 */
-
+	
 	public void render(Screen s) {
-	}
-	
-	/**
-	* Method used to check if animals colide with water.
-	* 
-	* @param x - x parameter of animal's position
-	* @param y - y parameter of animal's position
-	* @param m - map, where animals can move
-	*
-	* @return true - if animal colides with water, false otherwise
-	*/
-	
-	public static boolean waterColision(int x, int y, Map m) {
-
-		int posX, posY, id;
-		posX = x / 16;
-		posY = y / 16;
-
-		id = Tile.getId(m, posX, posY);
-
-		if (id == 3) {
-			return true;
-		} else {
-			return false;
-		}
+		s.renderSprite((int)x, (int)y, this.skin);
 	}
 	
 	/**
@@ -57,21 +37,103 @@ public abstract class Animal {
 	 * 
 	 * @param m - map, where animals can move
 	 */
-
+	
 	public void randMovment(Map m) {
-	}
+		Random r = new Random ();
+		int moveWay, posX, posY;
+		boolean isMovePosible;
+		posX = x;
+		posY = y;
+			moveWay=r.nextInt(4);
+			if(moveWay == 0 ) {
+				isMovePosible = waterColision(posX,posY, m);
+				if(isMovePosible == false) {
+					x-=speed;
+				}
+			}
+			else if(moveWay == 1) {
+				isMovePosible = waterColision(posX,posY, m);
+				if(isMovePosible == false) {
+					y-=speed;
+				}
+			}
+			else if(moveWay == 2 ) {
+				isMovePosible = waterColision(posX+16,posY, m);
+				if(isMovePosible == false) {
+					x+=speed;
+				}
+			}
+			else if(moveWay == 3) {
+				isMovePosible = waterColision(posX,posY+16, m);
+				if(isMovePosible == false) {
+					y+=speed;
+				}
+			}
 
+	}
+	
+	/**
+	 * 
+	 * @param x
+	 * @param y
+	 * @param m
+	 * @return
+	 */
+	
+	
+	public static boolean waterColision(int x, int y , Map m) {
+		int posX, posY, id;
+		posX = x/ 16;
+		posY = y / 16;
+		
+		id = getId(m, posX, posY);
+		
+//		do testów
+//		System.out.println(x);
+//		System.out.println(posX);
+//		System.out.println(id);
+		
+		if(id == 3 ) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @param m
+	 * @param x
+	 * @param y
+	 * @return
+	 */
+	
+	public static int getId(Map m, int x, int y) {
+		return m.tiles[x][y].id;
+	}
+	
 	/**
 	 * Method returns actual lifeTime integer.
 	 * 
 	 * @return actual lifeTime integer
 	 */
-
-	public abstract int getLifeTime();
-
+	
+	public int getLifeTime() {
+//		if(this.lifeTime>=0) System.out.println(this.toString()+" hp: "+this.lifeTime);
+		return this.lifeTime;
+	}
+	
+	
 	/**
 	 * Method decreases lifeTime after every update
 	 */
-
-	public abstract void updateLifeTime();
+	
+	public void updateLifeTime() {
+		int a;
+		a=this.lifeTime;
+		--a;
+		this.lifeTime=a;
+	}
 }

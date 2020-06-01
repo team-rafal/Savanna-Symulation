@@ -1,9 +1,10 @@
 package world.tiles;
 
-import graphics.Screen;
+
 import graphics.Sprite;
 import graphics.Spritesheet;
 import world.Tile;
+
 
 /**
  * This class defines a graphic representation of a water and renders itself.
@@ -14,19 +15,15 @@ import world.Tile;
  */
 
 public class Water extends Tile {
-
-	public static final Sprite texture = new Sprite(32, 16, 16, 16, Spritesheet.def);
-
+	
+	
 	/**
-	 * Constructor defines tile's id.
+	 * Constructor defines tile's id and graphic interpretation. 
 	 */
-
+	
 	public Water() {
-		id = 3;
+		id=3;
+		texture = new Sprite(32,16,16,16,Spritesheet.def);
 	}
-
-	public void render(Screen s, int x, int y) {
-		s.renderSprite(x * 16, y * 16, texture);
-
-	}
+	
 }

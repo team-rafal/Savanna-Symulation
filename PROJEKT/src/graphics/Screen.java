@@ -6,7 +6,7 @@ import java.awt.image.DataBufferInt;
 /**
  * This class is used to create space, where images can appear.
  * 
- * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec
+ * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec
  *
  * @version 0.2.3
  */
@@ -54,18 +54,18 @@ public class Screen {
 	}
 
 	/**
-	 * Method that makes sure that pixels are located within a window, ignores
-	 * color pink and ruturns a color.
+	 * Method that makes sure that pixels are located within a window and ignores
+	 * color pink.
 	 * 
-	 * @param x     - x parameter of a Sprite
-	 * @param y     - y parameter of a Sprite 
-	 * @param color - value of a certain color 
+	 * @param x     -
+	 * @param y     - TYCH PARAMETRÓW TROCHÊ NIE ROZUMIEM
+	 * @param color -
 	 */
 
 	private void pixel(int x, int y, int color) {
 		if (x < 0 || x >= WIDTH || y < 0 || y >= HEIGHT || color == 0xFFFF00FF)
 			return;
-		
+
 		pixels[x + y * WIDTH] = color;
 	}
 

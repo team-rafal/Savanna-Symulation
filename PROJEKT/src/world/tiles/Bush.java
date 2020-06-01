@@ -1,6 +1,6 @@
 package world.tiles;
 
-import graphics.Screen;
+
 import graphics.Sprite;
 import graphics.Spritesheet;
 import world.Tile;
@@ -15,19 +15,15 @@ import world.Tile;
 
 public class Bush extends Tile {
 
-	public static final Sprite texture = new Sprite(16, 16, 16, 16, Spritesheet.def);
-
+	
 	/**
-	 * Constructor defines tile's id.
+	 * Constructor defines tile's id and graphic interpretation.
 	 */
-
+	
 	public Bush() {
-		id = 2;
+		id=2;
+		texture = new Sprite(16,16,16,16,Spritesheet.def);
 	}
-
-	public void render(Screen s, int x, int y) {
-		s.renderSprite(x * 16, y * 16, texture);
-
-	}
+	
 
 }
