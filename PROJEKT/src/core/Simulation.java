@@ -9,7 +9,7 @@ import world.Map;
  * This class is used to create map and animals. It is also responsible for
  * updating and rendering them.
  * 
- * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec
+ * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec
  *
  * @version 0.2.3
  *
@@ -19,10 +19,9 @@ public class Simulation {
 
 	public Map map;
 	Random r = new Random();
-	private final int N = 25, X = 5;
+	private final int N = 60, X = 5;
 	public boolean running = true;
 
-	public Animal animal1, animal2, animal3, animal4, animal5, animal6, animal7, animal8, animal9, animal10;
 	Animal[] animal = new Animal[N];
 	private int lastX = -1, lastY = -1;
 	public ArrayList<Animal> animalList;
@@ -53,27 +52,24 @@ public class Simulation {
 				animalList.add(animal[z] = new Elephant(x, y));
 			else if (z >= 2 * X && z < 3 * X)
 				animalList.add(animal[z] = new Giraffe(x, y));
-			else if (z >= 3 * X && z < 4 * X)
+			else if (z >= 3 * X && z < 6 * X)
 				animalList.add(animal[z] = new Lion(x, y));
-			else if (z >= 4 * X)
+			else if (z >= 6 * X)
 				animalList.add(animal[z] = new Zebra(x, y));
-
 		}
 	}
 
 	/**
-	 * Method generates new coordinates of an animal and 
-	 * checks if last position of a different animal is different.
 	 * 
-	 * @param x - x parameter of animal's position
-	 * @param y - y parameter of animal's position
-	 * @param lastX - x parameter of animal which coordinates matched
-	 * @param lastY - y parameter of animal which coordinates matched
+	 * @param x
+	 * @param y
+	 * @param lastX
+	 * @param lastY
 	 */
 
 	private void generate(int x, int y, int lastX, int lastY) {
-		x = r.nextInt(608);
-		y = r.nextInt(320);
+		x = 20 +  r.nextInt(588);
+		y = 20 + r.nextInt(300);
 		if (x == lastX && y == lastY) {
 			generate(x, y, lastX, lastY);
 		}
@@ -88,8 +84,9 @@ public class Simulation {
 
 		for (Animal i : animalList) {
 			i.randMovment(map);
-			i.updateLifeTime();
+			i.updateLifeTime(map);
 		}
+		Animal.eat(animal);
 
 	}
 
@@ -108,7 +105,7 @@ public class Simulation {
 		int a = 0;
 
 		for (Animal i : animalList) {
-			if (i.getLifeTime() > 0)
+			if (i.getLifeTime() > 0 && i.getHunger() > 0 && i.getThirst() > 0)
 				i.render(s);
 			else {
 				i = null;
@@ -116,7 +113,7 @@ public class Simulation {
 			}
 		}
 
-		if (a == 25)
+		if (a == N)
 			running = false;
 
 	}
