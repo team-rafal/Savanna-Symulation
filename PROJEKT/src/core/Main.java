@@ -28,7 +28,7 @@ public class Main extends Canvas implements Runnable{
 
 	
 	public static int count = 0;
-	public static final String TITLE = "Savanna Wildlife Simulation 0.2.3";
+	public static final String TITLE = "Savanna Wildlife Simulation 0.4.0";
 	public static final int WIDTH = 1366, HEIGHT = 768;
 	
 	private boolean RUNNING = false;
