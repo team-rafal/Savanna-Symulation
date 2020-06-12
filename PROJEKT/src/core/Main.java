@@ -20,7 +20,7 @@ import javax.swing.JFrame;
  *
  * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
  * 
- * @version 0.2.3
+ * @version 1.0.0
  *  
  */
 
