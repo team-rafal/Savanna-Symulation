@@ -8,9 +8,9 @@ import javax.imageio.ImageIO;
  * This class is responsible for downloading Spritesheet, 
  * which will be used as a source for graphic representations of different objects.
  * 
- * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
+ * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec.
  *
- * @version 0.2.3
+ * @version 1.0.0
  */
 
 public class Spritesheet {
