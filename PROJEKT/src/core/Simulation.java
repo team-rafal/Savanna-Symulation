@@ -80,7 +80,7 @@ public class Simulation {
 	 * Method updates position of every animal on a map and updates their life time.
 	 */
 
-	public void update() {
+	protected void update() {
 
 		for (Animal i : animalList) {
 			i.randMovment(map);
@@ -98,7 +98,7 @@ public class Simulation {
 	 * @param s - space where images can appear
 	 */
 
-	public void render(Screen s) {
+	protected void render(Screen s) {
 
 		map.render(s);
 
