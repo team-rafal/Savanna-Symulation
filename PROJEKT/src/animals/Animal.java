@@ -9,9 +9,9 @@ import world.Map;
 /** This class and its subclasses are responsible for making and rendering aninals
  *  as well as changing their position randomly and update their state.
  * 
- * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
+ * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec.
  * 
- * @version 0.2.3
+ * @version 0.4.0
  */
 
 public abstract class Animal {
@@ -88,7 +88,7 @@ public abstract class Animal {
 		
 		id = getId(m, posX, posY);
 		
-//		do testów
+//		do testÃ³w
 //		System.out.println(x);
 //		System.out.println(posX);
 //		System.out.println(id);
