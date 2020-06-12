@@ -61,11 +61,13 @@ public class Simulation {
 
 	/**
 	 * 
+	 * Method generates another coordinates of x and y, if the coordinates matched
+	 *
 	 * @param x
 	 * @param y
 	 * @param lastX
 	 * @param lastY
-	 * Method generates another coordinates of x and y, if the coordinates matched
+	 * 
 	 */
 
 	private void generate(int x, int y, int lastX, int lastY) {
