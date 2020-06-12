@@ -8,7 +8,7 @@ import world.Map;
  /** 
  * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
  * 
- * @version 0.4.0
+ * @version 1.0.0
  */
 
 public class Giraffe extends Animal{
