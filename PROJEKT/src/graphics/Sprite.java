@@ -5,9 +5,9 @@ package graphics;
  * This class defines specific part of a Spritesheet, 
  * which is later used to define a graphic representation of different objects.
  * 
- * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
+ * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec.
  * 
- * @version 0.2.3
+ * @version 0.4.0
  *
  */
 
