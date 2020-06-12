@@ -6,9 +6,9 @@ import java.awt.image.DataBufferInt;
 /**
  * This class is used to create space, where images can appear.
  * 
- * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec
+ * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec
  *
- * @version 0.2.3
+ * @version 1.0.0
  */
 
 public class Screen {
@@ -58,7 +58,7 @@ public class Screen {
 	 * color pink.
 	 * 
 	 * @param x     -
-	 * @param y     - TYCH PARAMETRÓW TROCHÊ NIE ROZUMIEM
+	 * @param y     - TYCH PARAMETRÃ“W TROCHÃŠ NIE ROZUMIEM
 	 * @param color -
 	 */
 
