@@ -10,7 +10,9 @@ import world.Map;
 
 public class Antelope extends Animal{
  
- 
+ 	/**
+	* Constructor defines animal's attributes and its graphic representation.
+	*/
 	
 	
 	public Antelope(int x, int y) {
