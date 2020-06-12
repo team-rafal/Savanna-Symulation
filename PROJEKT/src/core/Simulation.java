@@ -17,14 +17,14 @@ import world.Map;
 
 public class Simulation {
 
-	public Map map;
-	Random r = new Random();
+	private Map map;
+	private Random r = new Random();
 	private final int N = 60, X = 5;
-	public boolean running = true;
+	protected boolean running = true;
 
-	Animal[] animal = new Animal[N];
+	private Animal[] animal = new Animal[N];
 	private int lastX = -1, lastY = -1;
-	public ArrayList<Animal> animalList;
+	private ArrayList<Animal> animalList;
 
 	/**
 	 * Constructor makes map and animals.
