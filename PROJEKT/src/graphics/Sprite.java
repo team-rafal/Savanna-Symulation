@@ -12,8 +12,8 @@ package graphics;
  */
 
 public class Sprite {
-	public int x,y,width,height;
-	public Spritesheet sp;
+	protected int x,y,width,height;
+	protected Spritesheet sp;
 	
 	/**
 	 * 
