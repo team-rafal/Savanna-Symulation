@@ -77,7 +77,7 @@ public abstract class Animal {
 
 	/**
 	 *
-	 *  Method used to check if animals colide with bush.
+	 *  Method used to check if animals colide with water.
 	 * 
 	 * @param x - position x of animal
 	 * @param y - position y of animal
