@@ -10,6 +10,10 @@ import world.Map;
 
 public class Lion extends Animal{
 	
+	/**
+	* Constructor defines animal's attributes and its graphic representation.
+	*/
+	
 	public Lion(int x, int y) {
 		this.x=x;
 		this.y=y;
