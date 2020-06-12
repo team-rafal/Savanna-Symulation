@@ -7,7 +7,9 @@ import world.Map;
 
 public class Elephant extends Animal{
 	
-
+	 /**
+	* Constructor defines animal's attributes and its graphic representation.
+	*/
 	
 	public Elephant(int x, int y) {
 		this.x=x;
