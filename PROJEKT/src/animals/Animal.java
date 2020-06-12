@@ -14,7 +14,7 @@ import core.Simulation;
  * 
  * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
  * 
- * @version 0.2.3
+ * @version 0.4.0
  */
 
 public abstract class Animal {
