@@ -27,9 +27,9 @@ import javax.swing.JFrame;
 public class Main extends Canvas implements Runnable{
 
 	
-	public static int count = 0;
-	public static final String TITLE = "Savanna Wildlife Simulation 1.0.0";
-	public static final int WIDTH = 1366, HEIGHT = 768;
+	private static int count = 0;
+	private static final String TITLE = "Savanna Wildlife Simulation 1.0.0";
+	private static final int WIDTH = 1366, HEIGHT = 768;
 	
 	private boolean RUNNING = false;
 	private JFrame frame;
