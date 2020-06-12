@@ -7,9 +7,9 @@ import world.Map;
 /**
  * This class is used to create map and animals. It is also responsible for updating and rendering them.
  * 
- * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec
+ * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec
  *
- * @version 0.2.3
+ * @version 0.4.0
  *
  */
 
