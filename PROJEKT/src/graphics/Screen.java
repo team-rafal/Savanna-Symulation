@@ -57,9 +57,9 @@ public class Screen {
 	 * Method that makes sure that pixels are located within a window and ignores
 	 * color pink.
 	 * 
-	 * @param x     -
-	 * @param y     - TYCH PARAMETRÓW TROCHÊ NIE ROZUMIEM
-	 * @param color -
+	 * @param x     - x parameter of a Sprite
+	 * @param y     - y parameter of a Sprite 
+	 * @param color - value of a certain color
 	 */
 
 	private void pixel(int x, int y, int color) {
