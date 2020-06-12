@@ -12,7 +12,7 @@ import core.Simulation;
  * This class and its subclasses are responsible for making and rendering
  * aninals as well as changing their position randomly and update their state.
  * 
- * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
+ * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec.
  * 
  * @version 0.2.3
  */
@@ -76,11 +76,13 @@ public abstract class Animal {
 	}
 
 	/**
+	 *
+	 *  Method used to check if animals colide with bush.
 	 * 
-	 * @param x
-	 * @param y
-	 * @param m
-	 * @return
+	 * @param x - position x of animal
+	 * @param y - position y of animal
+	 * @param m - map, where animals can move
+	 * @return true - if animal colides with a water, otherwise fals
 	 */
 
 	public static boolean waterColision(int x, int y, Map m) {
@@ -99,11 +101,12 @@ public abstract class Animal {
 
 	/**
 	 * 
+	 * Method used to get id value 
 	 * 
-	 * @param m
-	 * @param x
-	 * @param y
-	 * @return
+	 * @param x - position x of animal
+	 * @param y - position y of animal
+	 * @param m - map, where animals can move
+	 * @return id tile value in coordinates x y
 	 */
 
 	public static int getId(Map m, int x, int y) {
