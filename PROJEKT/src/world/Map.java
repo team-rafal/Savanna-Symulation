@@ -17,7 +17,7 @@ import graphics.Screen;
 public class Map {
 	
 	
-	public final int WIDTH,HEIGHT;
+	private final int WIDTH,HEIGHT;
 	
 	public Tile[][] tiles;
 	
