@@ -16,6 +16,9 @@ public class Antelope extends Animal{
  
  	/**
 	* Constructor defines animal's attributes and its graphic interpretation.
+	*
+	* @param x - x parameter of animal's position
+	* @param y - y parameter of animal's position
 	*/
 	
 	
