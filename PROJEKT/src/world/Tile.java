@@ -8,9 +8,9 @@ import world.tiles.*;
 /**
  * This class returns and renders certain tile.
  * 
- * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
+ * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec.
  * 
- * @version 0.2.3
+ * @version 1.0.0
  */
 
 public class Tile {
