@@ -6,9 +6,9 @@ import world.Tile;
 /**
  * This class defines graphic representation of a sand and renders itself.
  * 
- * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
+ * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec.
  * 
- * @version 0.2.3
+ * @version 1.0.0
  */
 
 public class Sand extends Tile {
