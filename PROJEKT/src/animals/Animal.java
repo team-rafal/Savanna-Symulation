@@ -150,6 +150,8 @@ public abstract class Animal {
 
 	/**
 	 * Method decreases lifeTime and animal of an herbivore when a specific term is met
+	 *
+	 *@param m - map, where animals can move
 	 */
 
 	public void updateLifeTime(Map m) {
@@ -173,7 +175,7 @@ public abstract class Animal {
 	}
 	
 	/**
-	 * * @param tab - array containing all the animals
+	 * @param tab[] - array containing all the animals
 	 * 
 	 *  The method checks whether the lion ate the herbivore and then increases its life time and hunger by random value.
 	 */
@@ -208,6 +210,8 @@ public abstract class Animal {
 
 	/**
 	 * Method returns positon X of an animal
+	 *
+	 *@return x parameter of animal's position
 	 */
 	public int getX() {
 		return this.x;
@@ -215,6 +219,8 @@ public abstract class Animal {
 
 	/**
 	 * Method returns positon Y of an animal
+	 *
+	 *@return x parameter of animal's position
 	 */
 	public int getY() {
 		return this.y;
@@ -222,6 +228,8 @@ public abstract class Animal {
 
 	/**
 	 * Method returns hunger of an animal
+	 *
+	 *@return hunger of animal
 	 */
 	public int getHunger() {
 		return this.hunger;
@@ -229,6 +237,8 @@ public abstract class Animal {
 
 	/**
 	 * Method returns thirst of an animal
+	 *
+	 *@return thirst of animal
 	 */
 	public int getThirst() {
 		return this.thirst;
@@ -236,6 +246,8 @@ public abstract class Animal {
 	
 	/**
 	 * Method returns type of an animal
+	 *
+	 *@return type of animal
 	 */
 	public boolean getMeatEater() {
 		return this.meatEater;
