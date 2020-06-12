@@ -5,72 +5,28 @@ import java.util.Random;
 import graphics.*;
 import world.Map;
 
+ /** 
+ * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
+ * 
+ * @version 1.0.0
+ */
+
 public class Giraffe extends Animal{
 	
-public static final Sprite skin = new Sprite (32,0,16,Spritesheet.def);
-	
-	private int x,y,
-	speed=4,
-	hunger,
-	thirst,
-	lifeTime = 100;
+	/**
+	* Constructor defines animal's attributes and its graphic interpretation.
+	*/
 	
 	public Giraffe(int x, int y) {
 		this.x=x;
 		this.y=y;
+		speed=4;
+		lifeTime = 150;
+		hunger = 100;
+		thirst=100;
+		meatEater = false;
+		skin = new Sprite (32,0,16,Spritesheet.def);
 	}
 	
-	
-	public void randMovment(Map m) {
-		
-		Random r = new Random ();
-		int moveWay, posX, posY;
-		boolean isMovePosible;
-		posX = x;
-		posY = y;
-			moveWay=r.nextInt(4);
-			if(moveWay == 0 ) {
-				isMovePosible = waterColision(posX,posY, m);
-				if(isMovePosible == false) {
-					y-=speed;
-				}
-			}
-			else if(moveWay == 1) {
-				isMovePosible = waterColision(posX,posY, m);
-				if(isMovePosible == false) {
-					y+=speed;
-				}
-			}
-			else if(moveWay == 2) {
-				isMovePosible = waterColision(posX,posY, m);
-				if(isMovePosible == false) {
-					x-=speed;
-				}
-			}
-			else if(moveWay == 3) {
-				isMovePosible = waterColision(posX,posY, m);
-				if(isMovePosible == false) {
-					x+=speed;
-				}
-			}
 
-		
-	}
-
-	public int getLifeTime() {
-		return this.lifeTime;
-	}
-	
-	public void updateLifeTime() {
-		int a;
-		a=this.lifeTime;
-		--a;
-		this.lifeTime=a;
-	}
-	
-	public void render(Screen s) {
-		
-		s.renderSprite((int)x, (int)y, this.skin);
-		
-	}
 }
