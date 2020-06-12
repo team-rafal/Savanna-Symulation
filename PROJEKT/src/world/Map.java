@@ -9,9 +9,9 @@ import graphics.Screen;
 /**
  * This class is used to create and render a map.
  * 
- * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
+ * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec.
  *
- * @version 0.2.3
+ * @version 0.4.0
  */
 
 public class Map {
