@@ -1,8 +1,8 @@
 /*
  * 
  * Savanna Wildlife Simulation is a simulation made for object oriented programming course.
- * Our group works under supervision of Mr. Mgr in¿. Szymon Zacher. 
- * Course is organised by Wroc³aw University of Science and Technology.
+ * Our group works under supervision of Mr. Mgr inÂ¿. Szymon Zacher. 
+ * Course is organised by WrocÂ³aw University of Science and Technology.
  *
 */
 package core;
@@ -18,7 +18,7 @@ import javax.swing.JFrame;
 /**
  *  This class is used to control the simulation, so to start, update, render and stop it.
  *
- * @author Andrzej Olszewski, Bartosz Szymczak, Rafa³ Rodak, Mateusz Marciniec.
+ * @author Andrzej Olszewski, Bartosz Szymczak, RafaÂ³ Rodak, Mateusz Marciniec.
  * 
  * @version 0.2.3
  *  
@@ -75,7 +75,7 @@ public class Main extends Canvas implements Runnable{
 		if(RUNNING) return;
 		RUNNING=true;
 		
-		new Thread(this,"Game " + TITLE).start();
+		new Thread(this, TITLE).start();
 	}
 	
 	/**
